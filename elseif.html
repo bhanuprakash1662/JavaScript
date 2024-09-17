@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*    1. Write a program to determine the fare for a taxi ride based on the distance traveled:
+    - 0-5 km: $5
+    - 5-10 km: $10
+    - 10-20 km: $20
+    - Above 20 km: $30 + $5 for every additional km*/
+
+let distance =22
+let km=distance-20
+if(distance >0 && distance<=5){
+    console.log("pay $5")
+}else if(distance >5 && distance<=10){
+    console.log("pay $10")
+}else if(distance >10 && distance<=20){
+    console.log("pay $20")
+}else{
+    console.log("pay",30+(km*5))
+}
+
+
+
+
+
+/*2. Write a program to determine the discount on a product based on the quantity purchased:
+    - 1-5 units: No discount
+    - 6-10 units: 5% discount
+    - 11-20 units: 10% discount
+    - Above 20 units: 15% discount*/
+let discount=22
+
+if(discount >=1 && discount<=5){
+    console.log("no discount")
+}else if(discount >=6 && discount<=10){
+    console.log("5% discount")
+}else if(discount >10 && discount<=20){
+    console.log("10% discount")
+}else{
+    console.log("15% discount")
+}
+    </script>
+</body>
+</html>

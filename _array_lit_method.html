@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*MAP
+    1. Double the numbers in an array: [1, 2, 3, 4, 5] → [2, 4, 6, 8, 10] */
+      function mapping(arr) {
+        return arr.map((a) => a * 2);
+      }
+      console.log(mapping([1, 2, 3, 4, 5]));
+
+      /* 2. Convert strings to uppercase: ["hello", "world"] → ["HELLO", "WORLD"]
+        Filter*/
+      arr = ["hello", "world"];
+      console.log(arr.map((a) => a.toUpperCase()));
+
+      /*Filter
+     1. Get even numbers from an array: [1, 2, 3, 4, 5] → [2, 4]*/
+      arr = [1, 2, 3, 4, 5];
+      console.log(arr.filter((x) => x % 2 == 0));
+      /*2. Get strings longer than 5 characters: ["hello", "world", "abc"] → ["hello", "world"]*/
+      arr = ["hello", "world", "abc"];
+      console.log(arr.filter((x) => x.length > 4));
+      /*ForEach
+    1. Log each number in an array: [1, 2, 3, 4, 5] → console logs each number*/
+      arr = [1, 2, 3, 4, 5];
+      arr.forEach((p, b) => {
+        console.log(p, b);
+      });
+
+      /*2. Append "!" to each string in an array: ["hello", "world"] → ["hello!", "world!"]*/jhgkj
+    </script>
+  </body>
+</html>
