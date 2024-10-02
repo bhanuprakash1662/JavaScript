@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=prompt("Enter the number: ").split("").map(Number)
+emp =[], unq=0;dup=0
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0;
+    for(j of arr){
+        if(i==j){
+            c++
+        }
+        }
+        if(c==1){
+            unq=unq+i+" "
+        }
+        else{
+            dup=dup+i+" "
+        }
+}
+console.log("Unique numbers are: ",unq)
+console.log("Duplicate numbers are: ",dup)
+
+//Enter the number: 1214
+// [ 1, 2, 4 ]
+// Unique numbers are:  2 4 
+// Duplicate numbers are:  1 
+
+
+
+
+arr=prompt("Enter the number: ").split("").map(Number)
+emp =[], unq=0;dup=0
+for(i of arr){
+    if(!emp.includes(i)){
+        emp.push(i)
+    }
+}
+console.log(emp)
+for(i of emp){
+    c=0;
+    for(j of arr){
+        if(i==j){
+            c++;
+        }
+        }
+        if(c==1){
+            console.log(i + "->" + c)
+            // unq=unq+i+" "
+        }
+        else{
+            // dup=dup+i+" "
+            console.log(i + "->" + c)
+        }
+}
+
+// node /tmp/jDttBkTuPj.js
+// Enter the number: 2788
+// [ 2, 7, 8 ]
+// 2->1
+// 7->1
+// 8->2
+    </script>
+</body>
+</html>

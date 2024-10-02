@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr=[23, 33, 200, 785]
+unq="";
+dup="";
+for (i of arr){
+    istr = String(i).split("").map(Number)
+    emp=[]
+    for (j of istr){
+        // console.log(j)
+        if(!emp.includes(j)){
+            emp.push(j)
+        }
+    }
+    // console.log(emp)
+    for(x of emp){
+        c=0;
+        for(z of istr){
+            if(x==z){
+                c++;
+            }
+        }
+        if(c==1){
+            unq=unq+x+" "
+        }
+        else{
+            dup=dup+x+""
+        }
+    }
+}
+console.log(dup) 
+
+//output==30
+
+
+
+
+arr = [ 538, 111, 200, 652]
+res=[]
+for(i of arr){
+    istr = String(i)
+    c=0
+    for(j=0;j<istr.length-1;j++){
+        if(istr[j+1]<istr[j]){
+            c++
+        }
+    }
+    res.push(istr.length-1 ==c)
+}
+console.log(res)
+
+// output
+// [ false, false, false, true ]
+    </script>
+</body>
+</html>
