@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        rows = +prompt("enter rows :");
+        spaces = 2 * rows - 1;
+        for (i = 1; i <= 2 * rows - 1; i++) {
+          (res = ""), (res1 = "");
+          a = i <= rows ? i : 2 * rows - i;
+          spaces = i <= rows ? (spaces = spaces - 2) : (spaces = spaces + 2);
+          for (k = 1; k <= spaces; k++) {
+            res1 += " ";
+          }
+          for (j = 1; j <= a; j++) {
+            if (j % 2 != 0) res += "1";
+            else res += "0";
+          }
+          if (i == rows)
+            console.log(
+              res +
+                res
+                  .slice(0, res.length - 1)
+                  .split("")
+                  .reverse()
+                  .join("")
+            );
+          else console.log(res + res1 + res.split("").join(""));
+        }
+        
+  // output
+  // enter rows :5
+  // 1       1
+  // 10     10
+  // 101   101
+  // 1010 1010
+  // 101010101
+  // 1010 1010
+  // 101   101
+  // 10     10
+  // 1       1
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// enter rows7
+// ABCDEFGFEDCBA
+// ABCDEF FEDCBA
+// ABCDE   EDCBA
+// ABCD     DCBA
+// ABC       CBA
+// AB         BA
+// A           A
+
+rows=+prompt("enter rows")
+for(i=0;i<=rows;i++){
+    res=""
+    alpha=65
+    for(j=1;j<=rows-i;j++){
+        res=res+String.fromCharCode(alpha)
+        alpha++
+    }
+    if(i==0)
+    console.log(res+res.slice(0,res.length-1).split("").reverse().join(""))
+    else
+    console.log(res+" ".repeat(2*i-1)+res.split("").reverse().join(""))
+}
+
+
+
+
+
+
+
+
+
+        rows = +prompt("enter rows :");
+        alpha = 65;
+        for (i = 1; i <= rows; i++) {
+          res = "";
+          for (j = 1; j <= i; j++) {
+            res += String.fromCharCode(alpha) + " ";
+            alpha++;
+          }
+          for (k = 1; k <= rows - i; k++) {
+            res += "  ";
+          }
+          x = res.split(" ").reverse().join(" ");
+          console.log(x);
+        }
+        
+        
+  // output
+  // enter rows :5
+  //          A
+  //       C B
+  //      F E D
+  //   J I H G
+  //  O N M L K
+
+
+
+
+
+    </script>
+</body>
+</html>

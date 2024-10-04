@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+rows=+prompt("enter rows :");
+for(i=1;i<=rows;i++){
+    res="",num=i;
+    for(j=1;j<=i;j++){
+       res+=num+" ";
+       num=i-j;
+    }
+    console.log(res);
+    
+}
+
+// output
+// enter rows :5
+// 1 
+// 2 1 
+// 3 2 1 
+// 4 3 2 1 
+// 5 4 3 2 1
+
+
+
+
+rows=+prompt("enter rows :");
+for(i=1;i<=rows;i++){
+    res="",num=i;
+    for(j=1;j<=i;j++){
+        res+=(num*2)+" ";
+        num+=(rows-j);
+    }
+    console.log(res);
+}
+
+// output
+// enter rows :5
+// 2 
+// 4 12 
+// 6 14 20 
+// 8 16 22 26 
+// 10 18 24 28 30 
+    </script>
+    
+</body>
+</html>
