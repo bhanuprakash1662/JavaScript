@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // matrix reading
+// problem 1
+let rows = +prompt("enter rows :");
+let cols = +prompt("enter cols :");
+(mat = []), (sum = 0);
+for (i = 1; i <= rows; i++) {
+  temp = [];
+  for (j = 1; j <= cols; j++) {
+    console.log("enter " + i + "" + j + "element :");
+    ele = prompt();
+    temp.push(ele);
+  }
+  mat.push(temp);
+}
+for (i = 0; i < rows; i++) {
+  for (j = 0; j < cols; j++) {
+    if (i == j || j == i || (i + j) == (rows - 1)) {console.log(mat[i][j]);
+    sum +=Number(mat[i][j]);
+    }
+  }
+}
+
+alert(sum);
+
+
+// output
+// enter rows :3
+// enter cols :3
+// enter 11element :
+// 2
+// enter 12element :
+// 3
+// enter 13element :
+// 4
+// enter 21element :
+// 3
+// enter 22element :
+// 4
+// enter 23element :
+// 2
+// enter 31element :
+// 3
+// enter 32element :
+// 4
+// enter 33element :
+// 1
+// 2
+// 4
+// 4
+// 3
+// 1
+// 14
+
+
+
+      
+      
+// problem 2
+rows = +prompt("enter rows :");
+cols = +prompt("enter cols :");
+mat = [];141
+for (i = 0; i < rows; i++) {
+  temp = [];
+  for (j = 0; j < cols; j++) {
+    ele = prompt("enter " + i + "" + j + " element :");
+    temp.push(ele);
+  }
+  mat.push(temp);
+}
+console.log(mat);
+sum = 0;
+for (j = 0; j < cols; j++) {
+  //console.log(mat[0][j])
+  //console.log(mat[rows-1][j])
+  sum += Number(mat[0][j]) + Number(mat[rows - 1][j]);
+}
+for (i = 1; i < cols - 1; i++) {
+  //console.log(mat[i][cols-1])
+  sum += Number(mat[i][0]) + Number(mat[i][cols - 1]);
+}
+alert(sum);
+
+// output
+// enter rows :3
+// enter cols :3
+// enter 00 element :2
+// enter 01 element :3
+// enter 02 element :4
+// enter 10 element :3
+// enter 11 element :4
+// enter 12 element :2
+// enter 20 element :3
+// enter 21 element :4
+// enter 22 element :1
+// [ [ '2', '3', '4' ], [ '3', '4', '2' ], [ '3', '4', '1' ] ]
+// 22
+    </script>
+</body>
+</html>

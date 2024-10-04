@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// problem 1
+rows=+prompt("enter rows :")
+cols=+prompt("enter cols :")
+m=[];
+for(i=1;i<=rows;i++){
+    x=[];
+    for(j=1;j<=cols;j++){
+        //console.log("enter "+i+""+j+" element :");
+        ele=prompt("enter "+i+""+j+" element :");
+        x.push(ele);
+    }
+    m.push(x);
+}
+for(i of m){
+    console.log(i.join(" "));
+}
+temp=[],y=[]
+for(i=0;i<rows;i++){
+    res="";
+    for(j=0;j<rows;j++){
+        if(i==j){
+            temp.push(m[i][j])
+        }
+        if(i+j==rows-1){
+             y.push(m[i][j])
+        }
+    }
+}
+ alert("diagonal elements are:"+temp.join(" ")+" "+y.join(" "));
+ 
+ 
+//  enter rows :3
+// enter cols :3
+// enter 11 element :1
+// enter 12 element :2
+// enter 13 element :3
+// enter 21 element :4
+// enter 22 element :5
+// enter 23 element :3
+// enter 31 element :2
+// enter 32 element :5
+// enter 33 element :3
+// 1 2 3
+// 4 5 3
+// 2 5 3
+// diagonal elements are:1 5 3 3 5 2
+
+
+
+
+
+//problem2
+rows=+prompt("enter rows :")
+cols=+prompt("enter cols :")
+m=[];
+for(i=1;i<=rows;i++){
+    x=[];
+    for(j=1;j<=cols;j++){
+        ele=prompt("enter "+i+""+j+" element :");
+        x.push(ele);
+    }
+    m.push(x);
+}
+temp=[]
+for(i=0;i<rows;i++){
+    res="";
+    for(j=0;j<rows;j++){
+        if(i==0||i==rows-1||j==0||j==cols-1){
+            temp.push(m[i][j])
+        }
+    }
+}
+ alert("outer layer elements:"+temp.join(" "));
+// output
+// enter rows :3
+// enter cols :3
+// enter 11 element :1
+// enter 12 element :2
+// enter 13 element :3
+// enter 21 element :4
+// enter 22 element :5
+// enter 23 element :3
+// enter 31 element :2
+// enter 32 element :5
+// enter 33 element :3
+// outer layer elements:1 2 3 4 3 2 5 3
+
+    </script>
+</body>
+</html>
