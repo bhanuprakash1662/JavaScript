@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Create a simple inheritance hierarchy using JavaScript classes.
+
+Requirements:
+
+1. Create a base class called Vehicle.
+2. Add properties: brand, model, year.
+3. Add methods: startEngine(), accelerate().
+4. Create two subclasses: Car and Truck.
+5. Inherit properties and methods from Vehicle.
+6. Add unique properties and methods to each subclass. -->
+
+    <script>
+        class vehicle{
+            constructor(brand,model,year){
+                this.brand=brand
+                this.model=model
+                this.year=year
+            }
+            startEngine(){
+                return (`this vehicle model is ${this.model}`)
+            }
+
+        
+        accelerate(){
+            return (`this acclerates with ${this.brand}`)
+        }
+    }
+    class car extends vehicle{
+        constructor(brand,model,year){
+            super(brand,model,year)
+        }
+        // this.year=year
+    }
+    class truck extends vehicle{
+        constructor(brand,model,year){
+            super(brand,model,year)
+        }
+        // console.log(this.model);
+
+    }
+    let obj=new car("nexa","scross",2020);
+    console.log(obj.startEngine());
+    console.log(obj.accelerate());
+    console.log(obj.brand)
+    let obj1=new truck("ashok leland","bharat benz",1990);
+    console.log(obj1.year)
+    console.log(obj1.startEngine());
+    console.log(obj1.accelerate());
+
+
+
+ //   Create a class called BankAccount with private properties:
+
+//- balance
+//- accountNumber
+
+/*And public methods:
+- deposit(amount): adds amount to balance
+- withdraw(amount): subtracts amount from balance
+- getBalance(): returns balance*/
+class bankAccount{
+    #balance
+    #accountNumber
+    constructor(balance,accountNumber){
+        this.#balance=balance
+        this.#accountNumber=accountNumber
+
+    }
+  set  deposit(amount){
+        this.#balance+=amount;
+    }
+   set withdraw(amount){
+        this.#balance-=amount;
+    }
+    get getBalance(){
+        return this.#balance
+    }
+
+}
+let ac=new bankAccount(2000,2012345)
+ac.deposit=1000;
+ac.withdraw=2000;
+// console.log(ac.deposit);
+console.log( ac.getBalance);
+
+
+
+/*Create a class called MathHelper with a static method:
+
+- addNumbers(a, b): returns the sum of a and b*/
+class mathHelper{
+    constructor(a,b){
+        this.a=a
+        this.b=b
+    }
+    static addnumbers(a,b){
+        return Number(a)+Number(b)
+    }
+}
+console.log( mathHelper.addnumbers(3,3));
+
+
+
+    </script>
+</body>
+</html>
